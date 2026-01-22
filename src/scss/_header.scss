@@ -1,0 +1,37 @@
+@use "reset" as *;
+@use "variables" as *;
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 80px 20px;
+  width: 100%;
+
+  .imgdiv {
+    display: flex;
+    justify-content: center;
+    max-width: 90%;
+    padding: 10px;
+
+    .hero-cat {
+      max-height: 270px;
+      max-width: 100%;
+    }
+
+    .logo {
+      max-height: 82px;
+      width: auto;
+      max-width: 100%;
+    }
+  }
+
+  h3 {
+    font-size: 16px;
+    font-weight: $thin;
+    text-align: center;
+    border-bottom: 5px solid $play-pink;
+  }
+}

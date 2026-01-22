@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -14,8 +14,8 @@
       <nav>
         <img src="/innekatt-2.svg" alt="logo icon" class="icon" />
         <div class="nav-links">
-          <a href="#">Produkter</a>
-          <a href="#">Kontakt</a>
+          <a href="#product-section">Produkter</a>
+          <a href="#footer">Kontakt</a>
           <a href="#">Varukorg (0)</a>
         </div>
       </nav>
@@ -39,9 +39,10 @@
           </div>
         </div>
       </section>
-      <section class="product-section">
+      <section class="product-section" id="product-section">
         <h1>Produkter</h1>
         <div class="js-products" id="js-products"></div>
+        <dialog class="modal" id="modal"></dialog>
       </section>
       <section class="reviews-section">
         <h1>Kundomdömen</h1>
@@ -77,7 +78,7 @@
           <img src="/mastercard.png" alt="mastercard logo" class="mastercard" />
         </div>
       </section>
-      <footer>
+      <footer id="footer">
         <div class="footer-row-1">
           <div class="logo-div">
             <img src="/innekatt-1.svg" alt="logo cat" />

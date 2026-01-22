@@ -1,4 +1,5 @@
-import { Product } from "./models/Product";
+import { Product } from "../models/Product";
+import { openModal } from "./openModal";
 
 //Funktion createHtml
 export const createHtml = (product: Product) => {
@@ -31,9 +32,15 @@ export const createHtml = (product: Product) => {
   price.innerHTML = product.price;
   btndiv.className = "btndiv";
   infobtn.className = "infobtn";
+  infobtn.id = "infobtn";
   infobtn.innerHTML = "Produktinformation";
   buybtn.className = "buybtn";
   buybtn.innerHTML = "Köp";
+
+  //Lyssnar efter klick på infoknappen
+  infobtn.addEventListener("click", () => {
+    openModal(product);
+  });
 
   //Placera element
   cardimg.appendChild(productimg);

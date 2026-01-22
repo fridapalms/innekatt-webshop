@@ -1,0 +1,105 @@
+@use "reset" as *;
+@use "variables" as *;
+
+.product-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 80px 40px;
+  background-color: $cream-beige;
+}
+
+h1 {
+  color: $cat-black;
+}
+
+.js-products {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  padding: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 320px;
+  padding: 20px;
+
+  .cardimg {
+    width: 280px;
+    height: 242px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .productimg {
+    width: 90%;
+    max-width: 247px;
+  }
+}
+
+.infodiv {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .brand {
+    margin: 0px;
+  }
+
+  .name {
+    margin: 0px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .price {
+    margin: 0px;
+  }
+}
+
+.btndiv {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+
+  .infobtn {
+    background-color: $cat-black;
+    color: $cream-beige;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 16px;
+    font-weight: $bold;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $play-pink;
+      color: $cat-black;
+    }
+  }
+
+  .buybtn {
+    background-color: $sky-blue;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 16px;
+    font-weight: $bold;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $play-pink;
+    }
+  }
+}
