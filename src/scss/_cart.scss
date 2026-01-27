@@ -24,7 +24,7 @@
   padding: 16px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 
 .cartHeader {
@@ -49,14 +49,63 @@
   }
 }
 
-.loadCartItems {
-  background-color: $cat-black;
+.cartSection {
+  background-color: $cream-beige;
   display: flex;
   flex-direction: column;
-  gap: 1px;
+  overflow: scroll;
+  padding: 10px;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.loadCartItems {
+  background-color: $cream-beige;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   overflow: scroll;
 
   &::-webkit-scrollbar {
     display: none;
+  }
+}
+
+.cartBtnDiv {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.emptyCartBtn {
+  background-color: $cat-black;
+  color: $cream-beige;
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 14px;
+  font-weight: $bold;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $play-pink;
+    color: $cat-black;
+  }
+}
+
+.toRegisterBtn {
+  background-color: $sky-blue;
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 14px;
+  font-weight: $bold;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $play-pink;
   }
 }

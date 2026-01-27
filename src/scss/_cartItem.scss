@@ -4,10 +4,10 @@
 .cartItemDiv {
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  gap: 15px;
   width: 100%;
-  height: 152px;
-  padding: 10px;
+  height: 140px;
+  padding: 5px;
   background-color: $cream-beige;
   margin: auto;
 
@@ -57,39 +57,39 @@
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
+}
 
-  .quantityBtn {
-    background-color: $sky-blue;
+.quantityBtn {
+  background-color: $sky-blue;
+  color: $cat-black;
+  border: none;
+  border-radius: 20%;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: $bold;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background-color: $play-pink;
     color: $cat-black;
-    border: none;
-    border-radius: 20%;
-    padding: 10px;
-    font-size: 16px;
-    font-weight: $bold;
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &:hover {
-      background-color: $play-pink;
-      color: $cat-black;
-    }
   }
+}
 
-  .quantityNumber {
-    background-color: $cream-beige;
-    border: none;
-    border-radius: 20%;
-    padding: 10px;
-    font-size: 16px;
-    font-weight: $bold;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.quantityNumber {
+  background-color: $cream-beige;
+  border: none;
+  border-radius: 20%;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: $bold;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

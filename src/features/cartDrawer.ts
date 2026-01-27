@@ -2,7 +2,7 @@ import { openDrawer } from "../utils/openDrawer";
 
 //Öppna och stänga varukorgen
 export const initCartDrawer = () => {
-  const cartBtn = document.getElementById("cartBtn");
+  const cartBtn = document.getElementById("openCart");
   const overlay = document.getElementById("cartOverlay");
   const closeBtn = document.getElementById("closeBtn");
 

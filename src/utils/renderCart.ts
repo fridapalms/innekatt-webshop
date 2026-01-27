@@ -1,4 +1,5 @@
 import { cart, getLocalStorage } from "./saveCart";
+import { minusQuantity, plusQuantity } from "./updateQuantity";
 
 export const renderCart = () => {
   const loadCartItems = document.getElementById("loadCartItems");
@@ -21,11 +22,11 @@ export const renderCart = () => {
   const cartTotalQuantity = document.getElementById("cartTotalQuantity");
 
   if (cartTotalQuantity) {
-    cartTotalQuantity.innerHTML = cart.length;
+    cartTotalQuantity.innerHTML = cart.length.toString();
   }
 
   //skapa html för varje produkt i varukorgen
-  cart.forEach((item) => {
+  cart.forEach((item, index) => {
     const cartItemDiv = document.createElement("div");
     cartItemDiv.className = "cartItemDiv";
 
@@ -59,12 +60,20 @@ export const renderCart = () => {
       price.className = "price";
       price.textContent = item.product.price;
       quantityBtns.className = "quantityBtns";
-      minusBtn.className = "minusBtn";
+      minusBtn.className = "quantityBtn";
       minusBtn.textContent = "-";
       quantityNumber.className = "quantityNumber";
-      quantityNumber.textContent = item.quantity;
-      plusBtn.className = "plusBtn";
+      quantityNumber.textContent = item.quantity.toString();
+      plusBtn.className = "quantityBtn";
       plusBtn.textContent = "+";
+
+      minusBtn.addEventListener("click", () => {
+        minusQuantity(index);
+      });
+
+      plusBtn.addEventListener("click", () => {
+        plusQuantity(index);
+      });
 
       //visa
       cartItemImgDiv.appendChild(cartItemImg);
