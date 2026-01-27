@@ -35,7 +35,9 @@ export const createHtml = (product: Product) => {
   infobtn.id = "infobtn";
   infobtn.innerHTML = "Produktinformation";
   buybtn.className = "buybtn";
+  buybtn.id = "buybtn";
   buybtn.innerHTML = "Köp";
+  buybtn.dataset.id = product.id;
 
   //Lyssnar efter klick på infoknappen
   infobtn.addEventListener("click", () => {

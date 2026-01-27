@@ -27,16 +27,36 @@
   gap: 10px;
 }
 
-.closeBtn {
-  position: absolute;
-  top: 10px;
-  right: 12px;
-  width: 36px;
+.cartHeader {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: space-between;
   height: 36px;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  font-size: 22px;
-  line-height: 1;
-  color: $cat-black;
+
+  .cartHeadline {
+    margin: 0;
+    font-size: 24px;
+  }
+
+  .closeBtn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 24px;
+    color: $cat-black;
+  }
+}
+
+.loadCartItems {
+  background-color: $cat-black;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  overflow: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }

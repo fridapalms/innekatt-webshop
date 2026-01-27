@@ -9,6 +9,7 @@
 @use "payments" as *;
 @use "footer" as *;
 @use "cart" as *;
+@use "cartItem" as *;
 
 .app {
   background-color: $cream-beige;

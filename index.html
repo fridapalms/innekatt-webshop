@@ -12,9 +12,14 @@
   <body>
     <div class="overlay" id="cartOverlay">
       <div class="drawer">
-        <button class="closeBtn" type="button" id="closeBtn">✕</button>
-        <h2>Varukorg</h2>
-        <p>Din varukorg är tom</p>
+        <div class="cartHeader">
+          <h2 class="cartHeadline">Varukorg</h2>
+          <button class="closeBtn" type="button" id="closeBtn">✕</button>
+        </div>
+
+        <p class="cartText" id="cartText">Här ekar det tomt!</p>
+
+        <div class="loadCartItems" id="loadCartItems"></div>
       </div>
     </div>
 
@@ -24,7 +29,7 @@
         <div class="nav-links">
           <a href="#product-section">Produkter</a>
           <a href="#footer">Kontakt</a>
-          <a href="#" id="cartBtn">Varukorg (0)</a>
+          <a href="#" id="cartBtn">Varukorg <span id="cartTotalQuantity">0</span></a>
         </div>
       </nav>
       <header>

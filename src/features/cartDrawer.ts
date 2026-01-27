@@ -1,4 +1,4 @@
-import { openDrawer } from "../utils/cart";
+import { openDrawer } from "../utils/openDrawer";
 
 //Öppna och stänga varukorgen
 export const initCartDrawer = () => {
