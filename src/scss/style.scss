@@ -8,6 +8,7 @@
 @use "reviews" as *;
 @use "payments" as *;
 @use "footer" as *;
+@use "cart" as *;
 
 .app {
   background-color: $cream-beige;

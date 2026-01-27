@@ -10,13 +10,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Stack+Sans+Headline:wght@200..700&display=swap" rel="stylesheet" />
   </head>
   <body>
+    <div class="overlay" id="cartOverlay">
+      <div class="drawer">
+        <button class="closeBtn" type="button" id="closeBtn">✕</button>
+        <h2>Varukorg</h2>
+        <p>Din varukorg är tom</p>
+      </div>
+    </div>
+
     <div id="app" class="app">
       <nav>
         <img src="/innekatt-2.svg" alt="logo icon" class="icon" />
         <div class="nav-links">
           <a href="#product-section">Produkter</a>
           <a href="#footer">Kontakt</a>
-          <a href="#">Varukorg (0)</a>
+          <a href="#" id="cartBtn">Varukorg (0)</a>
         </div>
       </nav>
       <header>
