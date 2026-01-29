@@ -15,7 +15,7 @@ export const createHtml = (product: Product) => {
   const price = document.createElement("p");
   const btndiv = document.createElement("div");
   const infobtn = document.createElement("button");
-  const buybtn = document.createElement("button");
+  const buyBtn = document.createElement("button");
 
   //Ändra element
   card.className = "card";
@@ -34,10 +34,10 @@ export const createHtml = (product: Product) => {
   infobtn.className = "infobtn";
   infobtn.id = "infobtn";
   infobtn.innerHTML = "Produktinformation";
-  buybtn.className = "buybtn";
-  buybtn.id = "buybtn";
-  buybtn.innerHTML = "Köp";
-  buybtn.dataset.id = product.id;
+  buyBtn.className = "buyBtn";
+  buyBtn.id = "buyBtn";
+  buyBtn.innerHTML = "Köp";
+  buyBtn.dataset.id = product.id;
 
   //Lyssnar efter klick på infoknappen
   infobtn.addEventListener("click", () => {
@@ -50,7 +50,7 @@ export const createHtml = (product: Product) => {
   infodiv.appendChild(name);
   infodiv.appendChild(price);
   btndiv.appendChild(infobtn);
-  btndiv.appendChild(buybtn);
+  btndiv.appendChild(buyBtn);
   card.appendChild(cardimg);
   card.appendChild(infodiv);
   card.appendChild(btndiv);

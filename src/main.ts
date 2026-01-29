@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("click", (e) => {
   const target = e.target as HTMLElement;
 
-  if (!target.classList.contains("buybtn")) return;
+  if (!target.classList.contains("buyBtn")) return;
 
   const productId = target.dataset.id;
   if (!productId) return;

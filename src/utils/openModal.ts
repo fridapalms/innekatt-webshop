@@ -12,6 +12,7 @@ export const openModal = (product: Product) => {
   const modalDiv = document.createElement("div");
   const imgDiv = document.createElement("div");
   const productImg = document.createElement("img");
+  const infoColumn = document.createElement("div");
   const infoDiv = document.createElement("div");
   const brand = document.createElement("h2");
   const name = document.createElement("h2");
@@ -27,6 +28,7 @@ export const openModal = (product: Product) => {
   imgDiv.style.backgroundColor = product.bg;
   productImg.className = "productImg";
   productImg.src = product.image;
+  infoColumn.className = "infoColumn";
   infoDiv.className = "infoDiv";
   brand.innerHTML = product.brand;
   name.innerHTML = product.name;
@@ -38,6 +40,7 @@ export const openModal = (product: Product) => {
   closeInfo.className = "closeInfo";
   buyBtn.textContent = "Köp";
   buyBtn.className = "buyBtn";
+  buyBtn.dataset.id = product.id;
 
   //Lyssna efter klick på Stäng info-knappen
   closeInfo.addEventListener("click", () => modal.close());
@@ -50,9 +53,10 @@ export const openModal = (product: Product) => {
   infoDiv.appendChild(info);
   btnDiv.appendChild(closeInfo);
   btnDiv.appendChild(buyBtn);
+  infoColumn.appendChild(infoDiv);
+  infoColumn.appendChild(btnDiv);
   modalDiv.appendChild(imgDiv);
-  modalDiv.appendChild(infoDiv);
-  modalDiv.appendChild(btnDiv);
+  modalDiv.appendChild(infoColumn);
   modal.appendChild(modalDiv);
 
   //Öppna modal
