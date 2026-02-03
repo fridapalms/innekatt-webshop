@@ -53,7 +53,7 @@ h3 {
   }
 }
 
-.purchaseBtn {
+.continueShopBtn {
   background-color: $cat-black;
   color: $cream-beige;
   border: none;
@@ -62,18 +62,16 @@ h3 {
   font-size: 16px;
   font-weight: $bold;
   cursor: pointer;
+  text-decoration: none;
+  color: $cream-beige;
 
-  &:hover:enabled {
+  &:hover {
     background-color: $play-pink;
     color: $cat-black;
   }
-
-  &:disabled {
-    opacity: 0.2;
-  }
 }
 
-.continueShop {
+.purchaseBtn {
   background-color: $sky-blue;
   border: none;
   border-radius: 10px;
@@ -84,7 +82,11 @@ h3 {
   text-decoration: none;
   color: $cat-black;
 
-  &:hover {
+  &:hover:enabled {
     background-color: $play-pink;
+  }
+
+  &:disabled {
+    opacity: 0.2;
   }
 }
