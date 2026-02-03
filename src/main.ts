@@ -5,15 +5,15 @@ import { initCartDrawer } from "./features/cartDrawer";
 import { addToCart, getLocalStorage } from "./utils/saveCart";
 import { renderCart } from "./utils/renderCart";
 import { clearCart } from "./utils/updateQuantity";
+import { showProductByActivity } from "./utils/activityProducts";
 
 //Loopa genom listan allproducts, skapar HTML för varje produkt
-allproducts.forEach((product) => {
-  const productsdiv = document.getElementById("js-products");
-
-  if (productsdiv) {
-    createHtml(product);
-  }
-});
+const productsdiv = document.getElementById("js-products");
+if (productsdiv) {
+  allproducts.forEach((product) => {
+    createHtml(product, productsdiv);
+  });
+}
 
 //När sidan laddat, kör dessa funktioner
 document.addEventListener("DOMContentLoaded", () => {
@@ -41,4 +41,14 @@ document.addEventListener("click", (e) => {
 const emptyCartBtn = document.getElementById("emptyCartBtn");
 emptyCartBtn?.addEventListener("click", () => {
   clearCart();
+});
+
+//Klick på aktivitetsknapp genererar filtrerad lista
+const activityBtns = document.querySelectorAll<HTMLButtonElement>(".activitybtn");
+activityBtns.forEach((button) => {
+  //Loopar igenom varje knapp
+  button.addEventListener("click", () => {
+    //Lyssnar efter klick
+    showProductByActivity(button.id); //Visar listan med rätt id
+  });
 });

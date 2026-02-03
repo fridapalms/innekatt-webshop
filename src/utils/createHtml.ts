@@ -2,9 +2,7 @@ import { Product } from "../models/Product";
 import { openModal } from "./openModal";
 
 //Funktion createHtml
-export const createHtml = (product: Product) => {
-  const productsdiv = document.getElementById("js-products");
-
+export const createHtml = (product: Product, container: HTMLElement) => {
   //Skapa element
   const card = document.createElement("div");
   const cardimg = document.createElement("div");
@@ -54,5 +52,5 @@ export const createHtml = (product: Product) => {
   card.appendChild(cardimg);
   card.appendChild(infodiv);
   card.appendChild(btndiv);
-  productsdiv?.appendChild(card);
+  container.appendChild(card);
 };

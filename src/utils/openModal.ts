@@ -44,6 +44,7 @@ export const openModal = (product: Product) => {
 
   //Lyssna efter klick på Stäng info-knappen
   closeInfo.addEventListener("click", () => modal.close());
+  buyBtn.addEventListener("click", () => modal.close());
 
   //Placera element
   imgDiv.appendChild(productImg);
