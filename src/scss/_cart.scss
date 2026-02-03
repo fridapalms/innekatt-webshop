@@ -91,13 +91,9 @@
   font-weight: $bold;
   cursor: pointer;
 
-  &:hover:enabled {
+  &:hover {
     background-color: $play-pink;
     color: $cat-black;
-  }
-
-  &:disabled {
-    opacity: 0.2;
   }
 }
 
@@ -112,11 +108,7 @@
   text-decoration: none;
   color: $cat-black;
 
-  &:hover:enabled {
+  &:hover {
     background-color: $play-pink;
-  }
-
-  &:disabled {
-    opacity: 0.2;
   }
 }
