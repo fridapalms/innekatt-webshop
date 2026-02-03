@@ -1,5 +1,6 @@
 import { renderCart } from "./renderCart";
 import { cart, getLocalStorage, saveToLocalStorage } from "./saveCart";
+import { updatePurchaseBtn } from "./updatePurchaseBtn";
 
 //ÖKA KVANTITETEN I VARUKORGEN
 export const plusQuantity = (index: number): void => {
@@ -16,7 +17,9 @@ export const plusQuantity = (index: number): void => {
 
   //spara i localStorage, uppdatera varukorgens UI och lägg till produkten i varukorgen
   saveToLocalStorage();
-  renderCart();
+  renderCart("loadCartItems");
+  renderCart("cart-products");
+  updatePurchaseBtn();
 };
 
 //MINSKA KVANTITETEN I VARUKORGEN
@@ -39,12 +42,16 @@ export const minusQuantity = (index: number): void => {
 
   //spara i localStorage, uppdatera varukorgens UI och lägg till produkten i varukorgen
   saveToLocalStorage();
-  renderCart();
+  renderCart("loadCartItems");
+  renderCart("cart-products");
+  updatePurchaseBtn();
 };
 
 //TÖM VARUKORGEN
 export function clearCart() {
   cart.length = 0;
   saveToLocalStorage();
-  renderCart();
+  renderCart("loadCartItems");
+  renderCart("cart-products");
+  updatePurchaseBtn();
 }

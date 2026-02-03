@@ -78,6 +78,7 @@
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
+  gap: 10px;
 }
 
 .emptyCartBtn {
@@ -90,9 +91,13 @@
   font-weight: $bold;
   cursor: pointer;
 
-  &:hover {
+  &:hover:enabled {
     background-color: $play-pink;
     color: $cat-black;
+  }
+
+  &:disabled {
+    opacity: 0.2;
   }
 }
 
@@ -104,8 +109,14 @@
   font-size: 14px;
   font-weight: $bold;
   cursor: pointer;
+  text-decoration: none;
+  color: $cat-black;
 
-  &:hover {
+  &:hover:enabled {
     background-color: $play-pink;
+  }
+
+  &:disabled {
+    opacity: 0.2;
   }
 }

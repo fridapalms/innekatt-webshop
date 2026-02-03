@@ -1,8 +1,8 @@
 import { cart, getLocalStorage } from "./saveCart";
 import { minusQuantity, plusQuantity } from "./updateQuantity";
 
-export const renderCart = () => {
-  const loadCartItems = document.getElementById("loadCartItems");
+export const renderCart = (containerId: string = "loadCartItems") => {
+  const loadCartItems = document.getElementById(containerId);
 
   if (!loadCartItems) return;
 

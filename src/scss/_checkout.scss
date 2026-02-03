@@ -1,0 +1,90 @@
+@use "variables" as *;
+@use "reset" as *;
+
+#checkoutForm {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+h3 {
+  font-size: 24pxs;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 320px;
+
+  label {
+    font-size: 16px;
+  }
+
+  input {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid $cat-black;
+    background-color: $cream-beige;
+  }
+}
+
+.paymentMethod {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 320px;
+
+  .paymentRow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 20px;
+    width: 320px;
+    align-items: center;
+  }
+
+  input[type="radio"] {
+    transform: scale(1.5);
+  }
+
+  label {
+    font-size: 18px;
+  }
+}
+
+.purchaseBtn {
+  background-color: $cat-black;
+  color: $cream-beige;
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 16px;
+  font-weight: $bold;
+  cursor: pointer;
+
+  &:hover:enabled {
+    background-color: $play-pink;
+    color: $cat-black;
+  }
+
+  &:disabled {
+    opacity: 0.2;
+  }
+}
+
+.continueShop {
+  background-color: $sky-blue;
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 16px;
+  font-weight: $bold;
+  cursor: pointer;
+  text-decoration: none;
+  color: $cat-black;
+
+  &:hover {
+    background-color: $play-pink;
+  }
+}

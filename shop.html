@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/innekatt-2.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>innekatt</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Stack+Sans+Headline:wght@200..700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="overlay" id="cartOverlay">
+      <div class="drawer">
+        <div class="cartHeader">
+          <h2 class="cartHeadline">Varukorg</h2>
+          <button class="closeBtn" type="button" id="closeBtn">✕</button>
+        </div>
+        <div class="cartSection">
+          <div class="loadCartItems" id="loadCartItems"></div>
+        </div>
+        <div class="cartBtnDiv">
+          <button class="emptyCartBtn" id="emptyCartBtn">Töm varukorg</button>
+          <a href="/shop.html" class="toRegisterBtn">Gå till kassan</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="app" class="app">
+      <nav>
+        <a href="/index.html"><img src="/innekatt-2.svg" alt="logo icon" class="icon" /></a>
+        <div class="nav-links">
+          <a href="#product-section">Produkter</a>
+          <a href="#footer">Kontakt</a>
+          <a href="#" id="openCart">Varukorg <span id="cartTotalQuantity">0</span></a>
+        </div>
+      </nav>
+
+      <section class="product-section" id="product-section">
+        <div class="products-div">
+        <h1 id="product-headline">Varukorg</h1>
+        <div id="cart-products"></div>
+        <div class="shop-section">
+        <form id="checkoutForm">
+            
+          <div class="contactForm">
+            <h3>Kontaktuppgifter</h2>
+            <label for="firstname">Förnamn:</label>
+            <input type="text" required />
+            <label for="lastname">Efternamn:</label>
+            <input type="text" required />
+            <label for="address">Gatuadress:</label>
+            <input type="text" required />
+            <label for="postcode">Postkod:</label>
+            <input type="number" required />
+            <label for="city">Stad:</label>
+            <input type="text" required />
+            <label for="email">Email:</label>
+            <input type="text" required />
+            <label for="phone">Telefonnummer:</label>
+            <input type="number" required />
+          </div>
+          
+          <div class="paymentMethod">
+            <h3>Betalmetod</h2>
+            <div class="paymentRow"><input type="radio" name ="payment" required /><label for="klarna"><img src="/klarna.png" alt="klarna logo" class="klarna" /></label></div>
+            <div class="paymentRow"><input type="radio" name ="payment" /><label for="swish"><img src="/swish.png" alt="swish logo" class="swish" /></label></div>
+            <div class="paymentRow"><input type="radio" name ="payment"  /><label for="card">
+                Betalkort (VISA eller Mastercard)</label></div>
+          </div>
+          <div class="cartBtnDiv">
+          <a href="/confirmation.html"><button type="submit" class="purchaseBtn" id="purchaseBtn">Bekräfta köp</button></a>
+          <a href="/index.html" class="continueShop">Fortsätt shoppa</a>
+        </div>
+        </form>
+        </div>
+        </div>
+      </section>
+
+      <footer id="footer">
+        <div class="footer-row-1">
+          <div class="logo-div">
+            <img src="/innekatt-1.svg" alt="logo cat" />
+            <img src="/innekatt-logo.svg" alt="logo name" />
+          </div>
+          <div class="information">
+            <p class="headline">Information</p>
+            <p class="conditions">Köpvillkor</p>
+            <p class="returns">Returpolicy</p>
+          </div>
+        </div>
+        <div class="footer-row-2">
+          <div class="information">
+            <p class="headline">Sociala medier</p>
+            <p class="insta">Instagram</p>
+            <p class="facebook">Facebook</p>
+          </div>
+          <div class="information">
+            <p class="headline">Kundservice</p>
+            <p class="questions">Vid frågor, maila oss:</p>
+            <p class="mail">kundservice@innekatt.se</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
