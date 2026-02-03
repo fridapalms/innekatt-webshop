@@ -12,17 +12,17 @@ export const renderCart = (containerId: string = "loadCartItems") => {
   //töm containern
   loadCartItems.innerHTML = "";
 
-  //om listan är tom, visa placeholder-texten
-  if (cart.length === 0) {
-    loadCartItems.innerHTML = `<p class="cartText" id="cartText">Här ekar det tomt!</p>`;
-    return;
-  }
-
   //uppdatera antal i varukorgen i nav
   const cartTotalQuantity = document.getElementById("cartTotalQuantity");
 
   if (cartTotalQuantity) {
     cartTotalQuantity.innerHTML = cart.length.toString();
+  }
+
+  //om listan är tom, visa placeholder-texten
+  if (cart.length === 0) {
+    loadCartItems.innerHTML = `<p class="cartText" id="cartText">Här ekar det tomt!</p>`;
+    return;
   }
 
   //skapa html för varje produkt i varukorgen
