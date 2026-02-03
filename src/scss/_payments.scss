@@ -9,12 +9,25 @@
   gap: 40px;
   padding: 50px 40px;
   background-color: $cream-beige;
+  justify-content: center;
+  align-items: center;
+
+  .payment-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+  }
 
   .payment-methods {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 40px;
+    justify-content: center;
+    align-items: center;
 
     img {
       width: auto;
