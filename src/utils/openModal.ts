@@ -33,7 +33,7 @@ export const openModal = (product: Product) => {
   brand.innerHTML = product.brand;
   name.innerHTML = product.name;
   name.className = "productName";
-  price.innerHTML = product.price;
+  price.innerHTML = product.price.toString();
   info.innerHTML = product.info;
   btnDiv.className = "btnDiv";
   closeInfo.textContent = "Stäng information";

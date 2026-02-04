@@ -49,6 +49,12 @@
   }
 }
 
+.cartText {
+  font-size: 16px;
+  padding: 10px;
+  margin: 0;
+}
+
 .cartSection {
   background-color: $cream-beige;
   display: flex;
@@ -71,6 +77,12 @@
   &::-webkit-scrollbar {
     display: none;
   }
+}
+
+.totalPrice {
+  font-size: 18px;
+  padding: 10px;
+  margin: 0;
 }
 
 .cartBtnDiv {

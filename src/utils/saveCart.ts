@@ -2,6 +2,7 @@ import type { cartItem } from "../models/cartItem";
 import { Product } from "../models/Product";
 import { openDrawer } from "./openDrawer";
 import { renderCart } from "./renderCart";
+import { updateCartTotal } from "./updateCartTotal";
 import { updatePurchaseBtn } from "./updatePurchaseBtn";
 
 //LocalStorage-nyckel där varukorgen sparas
@@ -50,4 +51,5 @@ export const addToCart = (product: Product) => {
   renderCart("cart-products");
   openDrawer();
   updatePurchaseBtn();
+  updateCartTotal();
 };

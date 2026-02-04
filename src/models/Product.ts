@@ -1,14 +1,14 @@
 export class Product {
   brand: string;
   name: string;
-  price: string;
+  price: number;
   image: string;
   info: string;
   id: string;
   bg: string;
   activity: string;
 
-  constructor(brand: string, name: string, price: string, image: string, info: string, id: string, bg: string, activity: string) {
+  constructor(brand: string, name: string, price: number, image: string, info: string, id: string, bg: string, activity: string) {
     this.brand = brand;
     this.name = name;
     this.price = price;

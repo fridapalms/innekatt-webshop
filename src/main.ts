@@ -7,6 +7,7 @@ import { renderCart } from "./utils/renderCart";
 import { clearCart } from "./utils/updateQuantity";
 import { showProductByActivity } from "./utils/activityProducts";
 import { updatePurchaseBtn } from "./utils/updatePurchaseBtn";
+import { updateCartTotal } from "./utils/updateCartTotal";
 
 //Loopa genom listan allproducts, skapar HTML för varje produkt
 const productsdiv = document.getElementById("js-products");
@@ -16,12 +17,14 @@ if (productsdiv) {
   });
 }
 
-//När sidan laddat, kör dessa funktioner
+//När index-sidan laddat, kör dessa funktioner
 document.addEventListener("DOMContentLoaded", () => {
   initCartDrawer();
   getLocalStorage();
   renderCart("loadCartItems");
   renderCart("cart-products");
+  updatePurchaseBtn();
+  updateCartTotal();
 });
 
 //Klick på köpknappen
@@ -69,4 +72,3 @@ purchaseForm.addEventListener("submit", (e) => {
   //Går till bekräftelsesidan
   window.location.href = "confirmation.html";
 });
-updatePurchaseBtn();

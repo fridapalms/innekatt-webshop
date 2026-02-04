@@ -1,5 +1,6 @@
 import { renderCart } from "./renderCart";
 import { cart, getLocalStorage, saveToLocalStorage } from "./saveCart";
+import { updateCartTotal } from "./updateCartTotal";
 import { updatePurchaseBtn } from "./updatePurchaseBtn";
 
 //ÖKA KVANTITETEN I VARUKORGEN
@@ -20,6 +21,7 @@ export const plusQuantity = (index: number): void => {
   renderCart("loadCartItems");
   renderCart("cart-products");
   updatePurchaseBtn();
+  updateCartTotal();
 };
 
 //MINSKA KVANTITETEN I VARUKORGEN
@@ -45,6 +47,7 @@ export const minusQuantity = (index: number): void => {
   renderCart("loadCartItems");
   renderCart("cart-products");
   updatePurchaseBtn();
+  updateCartTotal();
 };
 
 //TÖM VARUKORGEN
@@ -54,4 +57,5 @@ export function clearCart() {
   renderCart("loadCartItems");
   renderCart("cart-products");
   updatePurchaseBtn();
+  updateCartTotal();
 }
