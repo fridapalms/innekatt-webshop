@@ -27,7 +27,7 @@ export const createHtml = (product: Product, container: HTMLElement) => {
   name.className = "name";
   name.innerHTML = product.name;
   price.className = "price";
-  price.innerHTML = product.price;
+  price.innerHTML = product.price.toString();
   btndiv.className = "btndiv";
   infobtn.className = "infobtn";
   infobtn.id = "infobtn";
