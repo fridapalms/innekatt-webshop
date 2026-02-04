@@ -58,7 +58,7 @@ export const renderCart = (containerId: string = "loadCartItems") => {
       name.className = "name";
       name.textContent = item.product.name;
       price.className = "price";
-      price.textContent = item.product.price;
+      price.textContent = item.product.price.toString();
       quantityBtns.className = "quantityBtns";
       minusBtn.className = "quantityBtn";
       minusBtn.textContent = "-";
